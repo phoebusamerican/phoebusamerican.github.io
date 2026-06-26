@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 36" fill="none">
+  <!-- Atom mark -->
+  <circle cx="18" cy="18" r="5" fill="#0F7C88"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="#104761" stroke-width="1.8" fill="none"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="#104761" stroke-width="1.8" fill="none" transform="rotate(60 18 18)"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="#104761" stroke-width="1.8" fill="none" transform="rotate(120 18 18)"/>
+  <!-- Wordmark -->
+  <text x="42" y="13" font-family="Georgia, serif" font-size="10" font-weight="700" fill="#104761">PHOEBUS</text>
+  <text x="42" y="26" font-family="Arial, sans-serif" font-size="7" font-weight="400" letter-spacing="1.5" fill="#0F7C88">AMERICAN ENERGY SYSTEMS</text>
+</svg>

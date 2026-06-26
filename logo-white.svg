@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 36" fill="none">
+  <circle cx="18" cy="18" r="5" fill="rgba(255,255,255,0.9)"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" fill="none"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" fill="none" transform="rotate(60 18 18)"/>
+  <ellipse cx="18" cy="18" rx="15" ry="6" stroke="rgba(255,255,255,0.8)" stroke-width="1.8" fill="none" transform="rotate(120 18 18)"/>
+  <text x="42" y="13" font-family="Georgia, serif" font-size="10" font-weight="700" fill="white">PHOEBUS</text>
+  <text x="42" y="26" font-family="Arial, sans-serif" font-size="7" font-weight="400" letter-spacing="1.5" fill="rgba(255,255,255,0.65)">AMERICAN ENERGY SYSTEMS</text>
+</svg>
