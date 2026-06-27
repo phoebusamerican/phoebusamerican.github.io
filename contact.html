@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Phoebus American Energy Systems</title>
+  <meta name="description" content="Get in touch with Phoebus American Energy Systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.svg" alt="Phoebus American Energy Systems" class="logo-img" />
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="innovations.html">Innovations</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="hero-eyebrow">Get in Touch</p>
+      <h1 class="page-title">Let's build the hydrogen<br>economy together.</h1>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <p>Whether you're a potential partner, an investor, or an industrial operator looking for better hydrogen storage — we want to hear from you.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">Location</span>
+              <span>Worcester, Massachusetts</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">General Inquiries</span>
+              <a href="mailto:info@phoebusamerican.us">info@phoebusamerican.us</a>
+            </div>
+          </div>
+          <div class="contact-types">
+            <div class="contact-type-item">
+              <h4>Partnerships</h4>
+              <p>Industrial operators, pilot program candidates, and manufacturing partners.</p>
+            </div>
+            <div class="contact-type-item">
+              <h4>Investment</h4>
+              <p>Angel investors, venture funds, and strategic investors interested in deep-tech energy.</p>
+            </div>
+            <div class="contact-type-item">
+              <h4>Research</h4>
+              <p>Academic institutions, national labs, and government programs.</p>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="org">Organization</label>
+              <input type="text" id="org" name="org" placeholder="Acme Industries" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@acme.com" required />
+          </div>
+          <div class="form-group">
+            <label for="reason">Reason for contact</label>
+            <select id="reason" name="reason">
+              <option value="">Select one</option>
+              <option>Partnership inquiry</option>
+              <option>Investment interest</option>
+              <option>Research collaboration</option>
+              <option>General question</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your application or question." required></textarea>
+          </div>
+          <p class="form-note">To receive form submissions, connect a backend service like <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> after deployment — add your form endpoint to the form's <code>action</code> attribute.</p>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="footer-logo">
+        <img src="logo-white.svg" alt="Phoebus American Energy Systems" class="logo-img-footer" />
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="innovations.html">Innovations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-copy">© 2025 Phoebus American Energy Systems. All rights reserved.</p>
+      <p class="footer-tag">Worcester, Massachusetts · Provisional Patent #63/863,916</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
