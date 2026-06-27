@@ -299,7 +299,7 @@ strong { font-weight: 600; }
 }
 
 .hero-eyebrow {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -308,7 +308,7 @@ strong { font-weight: 600; }
 }
 
 .hero-headline {
-  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 700;
   line-height: 1.1;
   color: var(--white);
@@ -323,7 +323,7 @@ strong { font-weight: 600; }
 }
 
 .hero-sub {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.8;
   color: rgba(255,255,255,0.7);
@@ -342,7 +342,7 @@ strong { font-weight: 600; }
 
 .hero-scroll-cue span {
   display: block;
-  width: 1.5px; height: 48px;
+  width: 9px; height: 48px;
   background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
   margin: 0 auto;
   animation: scroll-line 2s ease-in-out infinite;
