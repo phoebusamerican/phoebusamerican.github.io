@@ -10,6 +10,7 @@
   <!-- font selection. -->
   <link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="icon" href="assets/favicon.ico"/>
 </head>
 <body>
 
@@ -123,47 +124,102 @@
     </div>
   </section>
 
-  <!-- PIPELINE -->
-  <section class="section">
+  <!-- TIMELINE -->
+  <section class="section bg-white">
     <div class="container">
-      <div class="section-label reveal">Development Status</div>
-      <h2 class="section-title reveal">Where we are, and where we're going.</h2>
-      <div class="pipeline-grid reveal">
-        <div class="pipeline-item done">
-          <div class="pipeline-marker"></div>
-          <div class="pipeline-content">
-            <h4>Provisional Patent Filed</h4>
-            <p>Core technology protected under provisional patent #63/863,916.</p>
+      <div class="section-label reveal">Our Journey</div>
+      <h2 class="section-title reveal">Where we've been, and where we're going.</h2>
+
+      <div class="timeline">
+
+        <!-- Stage 1 -->
+        <div class="tl-item reveal">
+          <div class="tl-marker done">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-status done">Completed</span>
+              <span class="tl-date">TODO: Add date</span>
+            </div>
+            <h3>TODO: Stage 1 Title</h3>
+            <p>TODO: Description of this stage in the product development journey.</p>
+            <!-- TODO: Add image if available
+            <div class="tl-image">
+              <img src="assets/TODO-stage1-photo.jpg" alt="TODO: describe image" />
+            </div>
+            -->
           </div>
         </div>
-        <div class="pipeline-item done">
-          <div class="pipeline-marker"></div>
-          <div class="pipeline-content">
-            <h4>WPI Research Partnership</h4>
-            <p>Active materials characterization and alloy development underway at Worcester Polytechnic Institute.</p>
+
+        <!-- Stage 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-marker done">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card">
+            <div class="tl-meta">
+              <span class="tl-status done">Completed</span>
+              <span class="tl-date">TODO: Add date</span>
+            </div>
+            <h3>TODO: Stage 2 Title</h3>
+            <p>TODO: Description of this stage.</p>
+            <div class="tl-image">
+              <img src="assets/TODO-stage2-photo.jpg" alt="TODO: describe image" />
+              <!-- TODO: Replace filename above with actual photo -->
+            </div>
           </div>
         </div>
-        <div class="pipeline-item active">
-          <div class="pipeline-marker"></div>
-          <div class="pipeline-content">
-            <h4>MVP Prototype</h4>
-            <p>Full-system prototype under active development. Manufacturing partner requirements document in progress.</p>
+
+        <!-- Stage 3 — Current -->
+        <div class="tl-item reveal">
+          <div class="tl-marker active">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+          <div class="tl-card tl-card--active">
+            <div class="tl-meta">
+              <span class="tl-status active">In Progress</span>
+              <span class="tl-date">TODO: Add date</span>
+            </div>
+            <h3>TODO: Stage 3 Title</h3>
+            <p>TODO: Description of what's currently underway.</p>
+            <div class="tl-image">
+              <img src="assets/TODO-stage3-photo.jpg" alt="TODO: describe image" />
+              <!-- TODO: Replace filename above with actual photo -->
+            </div>
           </div>
         </div>
-        <div class="pipeline-item">
-          <div class="pipeline-marker"></div>
-          <div class="pipeline-content">
-            <h4>Pilot Partnership</h4>
-            <p>Pilot program with PowerPlay Energy Group planned for prototype validation.</p>
+
+        <!-- Stage 4 — Future (trailing line implies story continues) -->
+        <div class="tl-item tl-item--future reveal">
+          <div class="tl-marker future">
+            <div class="tl-dot"></div>
+            <div class="tl-line tl-line--dashed"></div>
+          </div>
+          <div class="tl-card tl-card--future">
+            <div class="tl-meta">
+              <span class="tl-status future">Upcoming</span>
+              <span class="tl-date">TODO: Add date or leave as "2026" etc.</span>
+            </div>
+            <h3>TODO: Stage 4 Title</h3>
+            <p>TODO: Description of what comes next.</p>
+            <!-- No image for future stage — remove comment block below if you add one
+            <div class="tl-image">
+              <img src="assets/TODO-stage4-photo.jpg" alt="TODO: describe image" />
+            </div>
+            -->
           </div>
         </div>
-        <div class="pipeline-item">
-          <div class="pipeline-marker"></div>
-          <div class="pipeline-content">
-            <h4>Commercial Launch</h4>
-            <p>Target industrial and mobile customers following successful pilot validation.</p>
-          </div>
+
+        <!-- Trailing indicator — implies the story continues -->
+        <div class="tl-continue">
+          <div class="tl-continue-line"></div>
+          <span class="tl-continue-label">The journey continues.</span>
         </div>
+
       </div>
     </div>
   </section>

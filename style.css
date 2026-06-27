@@ -1059,3 +1059,186 @@ strong { font-weight: 600; }
   .app-card-full { grid-template-columns: 1fr; gap: 0.5rem; }
   .app-num { font-size: 1.25rem; }
 }
+
+/* ── TIMELINE ───────────────────────────────────────────────── */
+.timeline {
+  position: relative;
+  padding-top: 0.5rem;
+}
+
+.tl-item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.5rem;
+  position: relative;
+}
+
+/* Marker column: dot + vertical line */
+.tl-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tl-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2.5px solid var(--border);
+  background: var(--off-white);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.tl-marker.done .tl-dot {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.tl-marker.active .tl-dot {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 0 5px rgba(73, 183, 75, 0.18);
+}
+
+.tl-marker.future .tl-dot {
+  background: var(--off-white);
+  border-color: rgba(16, 71, 97, 0.25);
+}
+
+.tl-line {
+  width: 2px;
+  flex: 1;
+  background: var(--teal);
+  margin-top: 4px;
+  min-height: 2rem;
+}
+
+.tl-marker.future .tl-line,
+.tl-line--dashed {
+  background: none;
+  border-left: 2px dashed rgba(16, 71, 97, 0.2);
+}
+
+/* Card */
+.tl-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.tl-card:hover {
+  border-color: rgba(15, 124, 136, 0.3);
+  box-shadow: 0 4px 20px rgba(16, 71, 97, 0.07);
+}
+
+.tl-card--active {
+  border-color: rgba(73, 183, 75, 0.35);
+  background: rgba(73, 183, 75, 0.03);
+}
+
+.tl-card--future {
+  opacity: 0.65;
+}
+
+.tl-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.tl-status {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+}
+
+.tl-status.done {
+  background: rgba(15, 124, 136, 0.1);
+  color: var(--teal);
+}
+
+.tl-status.active {
+  background: rgba(73, 183, 75, 0.12);
+  color: #2d8c2f;
+}
+
+.tl-status.future {
+  background: var(--navy-light);
+  color: var(--text-light);
+}
+
+.tl-date {
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.tl-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.tl-card p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+.tl-image {
+  margin-top: 1.25rem;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.tl-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Trailing "journey continues" element */
+.tl-continue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 16px; /* aligns with center of dot column */
+  margin-left: 16px;
+  gap: 0.5rem;
+}
+
+.tl-continue-line {
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(16, 71, 97, 0.2), transparent);
+}
+
+.tl-continue-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  padding-left: 1rem;
+}
+
+@media (max-width: 640px) {
+  .tl-item { grid-template-columns: 32px 1fr; gap: 1rem; }
+  .tl-image img { height: 160px; }
+}
