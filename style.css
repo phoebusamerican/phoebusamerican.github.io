@@ -1048,7 +1048,7 @@ strong { font-weight: 600; }
   }
 
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.1rem; color: var(--white) !important; }
+  .nav-links a { font-size: 4.5rem; color: var(--white) !important; }
   .nav-toggle { display: flex; }
 
   .form-row { grid-template-columns: 1fr; }
