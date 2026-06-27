@@ -54,8 +54,8 @@ if (revealEls.length) {
 const videos = document.querySelectorAll('.hero-video');
 const dots = document.querySelectorAll('.hero-dot');
 const appTextEl = document.getElementById('appText');
-const appLabels = ['Mobility', 'Industry', 'Agriculture'];
-const MIN_DISPLAY_MS = 4000; // minimum time before advancing, even on short clips
+const appLabels = ['Mobility', 'Metallurgy', 'Energy', 'Manufacturing'];
+const MIN_DISPLAY_MS = 3500; // minimum time before advancing, even on short clips
 
 if (videos.length > 0) {
   let current = 0;
