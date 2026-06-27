@@ -55,62 +55,88 @@ const videos = document.querySelectorAll('.hero-video');
 const dots = document.querySelectorAll('.hero-dot');
 const appTextEl = document.getElementById('appText');
 const appLabels = ['Mobility', 'Industry', 'Agriculture'];
+const MIN_DISPLAY_MS = 4000; // minimum time before advancing, even on short clips
 
 if (videos.length > 0) {
   let current = 0;
-  let timer = null;
+  let minTimer = null;
+  let minElapsed = false;
+  let videoEnded = false;
+
+  function updateLabel(index) {
+    if (!appTextEl) return;
+    appTextEl.style.opacity = '0';
+    setTimeout(() => {
+      appTextEl.textContent = appLabels[index] || '';
+      appTextEl.style.opacity = '1';
+    }, 200);
+  }
 
   function goTo(index) {
-    // Fade out current
     videos[current].classList.remove('active');
+    videos[current].pause();
     dots[current] && dots[current].classList.remove('active');
 
     current = index;
+    minElapsed = false;
+    videoEnded = false;
 
-    // Fade in next
+    videos[current].currentTime = 0;
     videos[current].classList.add('active');
     dots[current] && dots[current].classList.add('active');
-
-    // Play the video
-    videos[current].currentTime = 0;
     videos[current].play().catch(() => {});
+    updateLabel(current);
 
-    // Update label
-    if (appTextEl) {
-      appTextEl.style.opacity = '0';
-      setTimeout(() => {
-        appTextEl.textContent = appLabels[current] || '';
-        appTextEl.style.opacity = '1';
-      }, 200);
-    }
+    // Start minimum display timer
+    clearTimeout(minTimer);
+    minTimer = setTimeout(() => {
+      minElapsed = true;
+      if (videoEnded) advance();
+    }, MIN_DISPLAY_MS);
   }
 
-  function next() {
+  function advance() {
     goTo((current + 1) % videos.length);
   }
 
-  function startTimer() {
-    clearInterval(timer);
-    timer = setInterval(next, 7000);
-  }
+  // Attach ended listener to every video
+  videos.forEach((vid, i) => {
+    // Remove loop attribute programmatically in case it's set in HTML
+    vid.removeAttribute('loop');
+
+    vid.addEventListener('ended', () => {
+      if (i !== current) return;
+      videoEnded = true;
+      if (minElapsed) advance();
+    });
+  });
 
   // Dot click controls
   dots.forEach(dot => {
     dot.addEventListener('click', () => {
-      const index = parseInt(dot.dataset.index, 10);
-      goTo(index);
-      startTimer();
+      clearTimeout(minTimer);
+      goTo(parseInt(dot.dataset.index, 10));
     });
   });
 
-  // Start cycling — wait for first video to play
-  videos[0].addEventListener('canplay', () => {
+  // Kick off first video
+  function startFirst() {
+    videos[0].currentTime = 0;
     videos[0].play().catch(() => {});
-    startTimer();
-  }, { once: true });
+    updateLabel(0);
+    minTimer = setTimeout(() => {
+      minElapsed = true;
+      if (videoEnded) advance();
+    }, MIN_DISPLAY_MS);
+  }
 
-  // Fallback: start timer anyway after 2s in case canplay already fired
-  setTimeout(startTimer, 2000);
+  if (videos[0].readyState >= 3) {
+    startFirst();
+  } else {
+    videos[0].addEventListener('canplay', startFirst, { once: true });
+    // Fallback if canplay never fires (e.g. no video files yet)
+    setTimeout(startFirst, 1500);
+  }
 }
 
 // ── CONTACT FORM ─────────────────────────────────────────────
