@@ -64,7 +64,7 @@ strong { font-weight: 600; }
 .nav-logo { display: flex; align-items: center; }
 
 .logo-img {
-  height: 34px;
+  height: 52px;
   width: auto;
   transition: filter var(--transition);
 }
@@ -984,7 +984,7 @@ strong { font-weight: 600; }
   text-align: center;
 }
 
-.logo-img-footer { height: 26px; width: auto; margin-bottom: 0.25rem; }
+.logo-img-footer { height: 52px; width: auto; margin-bottom: 0.25rem; }
 
 .footer-nav {
   display: flex;
