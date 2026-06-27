@@ -376,7 +376,7 @@ strong { font-weight: 600; }
 .section.bg-white { background: var(--white); }
 
 .section-label {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -405,7 +405,7 @@ strong { font-weight: 600; }
 }
 
 .about-teaser-text h2 {
-  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-size: clamp(1.8rem, 3.0vw, 2.6rem);
   font-weight: 600;
   line-height: 1.2;
   color: var(--navy);
@@ -492,7 +492,7 @@ strong { font-weight: 600; }
 }
 
 .app-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--navy);
   margin-bottom: 0.65rem;
