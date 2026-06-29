@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <form class="contact-form reveal" id="contactForm" novalidate>
+        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mnjkzglz" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
@@ -95,8 +95,10 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" placeholder="Tell us about your application or question." required></textarea>
           </div>
-          <p class="form-note">To receive form submissions, connect a backend service like <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a> after deployment — add your form endpoint to the form's <code>action</code> attribute.</p>
           <button type="submit" class="btn-primary">Send Message</button>
+
+          <input type="hidden" name="_subject" value="New inquiry — Phoebus American Energy Systems" />
+        
         </form>
       </div>
     </div>
