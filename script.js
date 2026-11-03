@@ -140,13 +140,43 @@ if (videos.length > 0) {
 }
 
 // ── CONTACT FORM ─────────────────────────────────────────────
+// Submits to the Formspree endpoint in the form's action attribute.
+// (Previously this handler called preventDefault() and only changed the
+// button text, so no message was ever actually sent.)
 const form = document.getElementById('contactForm');
 if (form) {
-  form.addEventListener('submit', e => {
+  const btn = form.querySelector('button[type="submit"]');
+  const status = document.createElement('p');
+  status.className = 'form-note';
+  status.setAttribute('role', 'status');
+  status.hidden = true;
+  form.appendChild(status);
+
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Message sent';
+    const originalLabel = btn.textContent;
     btn.disabled = true;
-    btn.style.opacity = '0.6';
+    btn.textContent = 'Sending…';
+    status.hidden = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('Request failed: ' + res.status);
+
+      btn.textContent = 'Message sent';
+      btn.style.opacity = '0.6';
+      form.reset();
+      status.textContent = 'Thanks! We\u2019ll be in touch soon.';
+      status.hidden = false;
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = originalLabel;
+      status.textContent = 'Something went wrong sending your message. Please try again, or email info@phoebusamerican.us.';
+      status.hidden = false;
+    }
   });
 }

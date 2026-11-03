@@ -23,8 +23,8 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
       <li><a href="innovations.html">Innovations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -67,7 +67,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Phoebus American Energy Systems</p>
       <h1 class="hero-headline">Safe, affordable<br><em>and</em> powerful hydrogen storage.</h1>
-      <p class="hero-sub">Uncompromizing hydrogen storage <br> for mobile and industrial applications.</p>
+      <p class="hero-sub">Uncompromising hydrogen storage <br> for mobile and industrial applications.</p>
       <div class="hero-actions">
         <a href="innovations.html" class="btn-primary">Our Innovations</a>
         <a href="contact.html" class="btn-ghost">Get in Touch</a>
@@ -75,6 +75,36 @@
     </div>
 
     <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- IMPACT: the problem, quantified -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <div class="section-label reveal">The Problem</div>
+      <h2 class="impact-title reveal">Hydrogen is still too hard to store. <span>Phoebus is changing that.</span></h2>
+
+      <div class="impact-grid reveal">
+        <div class="impact-stat">
+          <div class="impact-num">$34.55<small>/kg</small></div>
+          <p class="impact-desc">average pump price of hydrogen in California in October 2024, a record at the time.</p>
+          <a class="impact-source" href="https://www.spglobal.com/commodity-insights/en/news-research/latest-news/energy-transition/100124-california-hydrogen-pump-prices-for-light-duty-vehicles-reach-new-highs" target="_blank" rel="noopener">S&amp;P Global Commodity Insights</a>
+        </div>
+
+        <div class="impact-stat">
+          <div class="impact-num">700<small>bar</small></div>
+          <p class="impact-desc">working pressure of the compressed gas tanks in today's fuel cell vehicles, roughly 10,000 psi.</p>
+          <a class="impact-source" href="https://www.energy.gov/eere/fuelcells/physical-hydrogen-storage" target="_blank" rel="noopener">U.S. Department of Energy</a>
+        </div>
+
+        <div class="impact-stat">
+          <div class="impact-num">30%+</div>
+          <p class="impact-desc">of hydrogen's energy content is consumed just to liquefy it for cryogenic storage.</p>
+          <a class="impact-source" href="https://www.hydrogen.energy.gov/pdfs/9013_energy_requirements_for_hydrogen_gas_compression.pdf" target="_blank" rel="noopener">U.S. DOE Hydrogen Program</a>
+        </div>
+      </div>
+
+      <a href="innovations.html" class="impact-link reveal">See how we solve it &rarr;</a>
+    </div>
   </section>
 
   <!-- ABOUT TEASER -->
@@ -94,24 +124,29 @@
         <!--statistics here!!-->
         <div class="stat-row reveal">
 
+          <!-- STAT SOURCES: keep these in sync with the comparison table in innovations.html.
+               ~3.7x  = internal volumetric density target vs. compressed gas
+               ~1.4%  = ~10 bar (MISS) / 700 bar (compressed gas)
+               ~6.3%  = MISS wt% from the table
+               53%    = 1 - ($16.44 MISS / $34.95 compressed gas) -->
           <div class="stat-item">
-            <span class="stat-num">4x</span>
-            <span class="stat-label">Denser storage<br>vs. compressed gas solutions.</span>
+            <span class="stat-num">~3.7x</span>
+            <span class="stat-label">Target volumetric density<br>vs. compressed gas solutions.</span>
           </div>
 
           <div class="stat-item">
-            <span class="stat-num">~1%</span>
+            <span class="stat-num">~1.4%</span>
             <span class="stat-label">Operating pressure<br>vs. compressed gas solutions.</span>
           </div>
 
           <div class="stat-item">
-            <span class="stat-num">~6.5%</span>
+            <span class="stat-num">~6.3%</span>
             <span class="stat-label">Hydrogen by mass,<br>industry-leader in solid-state solutions.</span>
           </div>
 
           <div class="stat-item">
-            <span class="stat-num">45%</span>
-            <span class="stat-label">Reduction in costs to the consumer<br>vs. compressed gas solutions.</span>
+            <span class="stat-num">53%</span>
+            <span class="stat-label">Reduction in cost per kg<br>vs. compressed gas solutions.</span>
           </div>
 
         </div>
@@ -128,6 +163,7 @@
         <div class="app-card reveal">
 
           <div class="app-card-img">
+            <!-- TODO (alt text): replace the alt below with a description of the new Mobility photo. -->
             <img src="assets/appcard-images/mobility.jpg" alt="Hydrogen fuel cell vehicle" />
           </div>
           
@@ -140,6 +176,7 @@
 
         <div class="app-card reveal">
           <div class="app-card-img">
+            <!-- TODO (alt text): replace the alt below with a description of the new Metallurgy photo. -->
             <img src="assets/appcard-images/metallurgy.jpg" alt="Hydrogen fuel cell vehicle" />
           </div>
 
@@ -152,6 +189,7 @@
         <div class="app-card reveal">
 
           <div class="app-card-img">
+            <!-- TODO (alt text): replace the alt below with a description of the new Agriculture photo. -->
             <img src="assets/appcard-images/agriculture.jpg" alt="Hydrogen fuel cell vehicle" />
           </div>
           
@@ -175,7 +213,7 @@
       </a>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
-        <a href="#about">About</a>
+        <a href="index.html#about">About</a>
         <a href="innovations.html">Innovations</a>
         <a href="contact.html">Contact</a>
       </nav>
